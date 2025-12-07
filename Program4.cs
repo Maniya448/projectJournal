@@ -5,14 +5,14 @@ namespace ConsoleApplication
     class Customer
     {
         public string Name;
-        public int CoffeeBags;
+        public int TeaBags;
         public bool IsReseller;
 
         public double CalculateTotalCost()
         {
             if (CoffeeBags < 6)
                 return CoffeeBags * 36;
-            else if (CoffeeBags < 16)
+            else if (CoffeeBags < 17)
                 return CoffeeBags * 34.5;
             else
                 return CoffeeBags * 32.7;
@@ -42,10 +42,10 @@ namespace ConsoleApplication
             {
                 Customer customer = new Customer();
 
-                Console.Write("Enter Customer Name: ");
+                Console.Write("Enter New Customer Name: ");
                 customer.Name = Console.ReadLine();
 
-                Console.Write("Enter Number Of Coffee Bags (1-200): ");
+                Console.Write("Enter Number Of Tea Bags (1-200): ");
                 customer.CoffeeBags = Int32.Parse(Console.ReadLine());
 
                 while (customer.CoffeeBags < 1 || customer.CoffeeBags > 200)
